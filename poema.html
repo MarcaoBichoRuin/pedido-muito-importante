@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café, pão e vídeo game com você</title>
+    <style>
+        /* Reset de margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #ffebcd, #deb887);
+            font-family: 'Georgia', serif;
+            color: #333;
+            position: relative;
+            padding: 20px;
+            overflow: hidden; /* Para evitar overflow em telas pequenas */
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            color: #8b4513;
+            margin-bottom: 20px;
+            font-size: 4vw; /* Ajustado para ser responsivo */
+        }
+
+        p {
+            font-size: 2vw; /* Ajustado para ser responsivo */
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Ícones flutuantes */
+        .floating-icon {
+            width: 5vw; /* Ajustado para ser responsivo */
+            height: 5vw; /* Ajustado para ser responsivo */
+            background-size: contain;
+            position: absolute;
+            animation: float 10s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        .coffee-cup {
+            background: url('https://img.icons8.com/color/35/cola.png') no-repeat center center;
+        }
+
+        .bread {
+            background: url('https://img.icons8.com/color/48/000000/bread.png') no-repeat center center;
+        }
+
+        .gamepad {
+            background: url('https://img.icons8.com/fluency/30/ps-controller.png') no-repeat center center;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); } /* Começa fora da tela (parte inferior) */
+            50% { transform: translateY(-100vh); } /* Passa pela tela e sai pela parte superior */
+            100% { transform: translateY(100vh); } /* Volta para o início na parte inferior */
+        }
+
+        @keyframes float-reverse {
+            0% { transform: translateY(-100vh); } /* Começa fora da tela (parte superior) */
+            50% { transform: translateY(100vh); } /* Passa pela tela e sai pela parte inferior */
+            100% { transform: translateY(-100vh); } /* Volta para o início na parte superior */
+        }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 5vw;
+            }
+
+            p {
+                font-size: 3vw;
+            }
+
+            .floating-icon {
+                width: 8vw; /* Aumentar os ícones em telas menores */
+                height: 8vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 6vw;
+            }
+
+            p {
+                font-size: 4vw;
+            }
+
+            .floating-icon {
+                width: 10vw; /* Aumentar os ícones ainda mais em telas muito pequenas */
+                height: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Coca-Cola bem gelada, fazer pão e jogar vídeo game com você</h1>
+        <p>
+            Fazer um pão, tomar uma Coca-Cola bem gelada,<br>
+            E jogar com você até eu cansar de perder de você,<br>
+        </p>
+        <p>
+            A Coca-Cola esfria nossa alma,<br>
+            O pão nos dá forças pra vencer,<br>
+            No jogo, te deixo ganhar,<br>
+            Pois não gosto de te ver perder.
+        </p>
+        <p>Com carinho, de quem sempre quer compartilhar uma partida do game com você! 🥤🥖🎮❤️</p>
+    </div>
+
+    <!-- Ícones flutuantes ao redor da página -->
+    <div class="floating-icon coffee-cup" style="left: 10%; animation-duration: 16s;"></div>
+    <div class="floating-icon bread" style="left: 20%; animation-duration: 11s;"></div>
+    <div class="floating-icon gamepad" style="left: 30%; animation-duration: 18s;"></div>
+    <div class="floating-icon coffee-cup" style="left: 40%; animation-duration: 14s; animation-name: float-reverse;"></div>
+    <div class="floating-icon bread" style="left: 50%; animation-duration: 16s; animation-name: float-reverse;"></div>
+    <div class="floating-icon gamepad" style="left: 60%; animation-duration: 20s;"></div>
+    <div class="floating-icon coffee-cup" style="left: 70%; animation-duration: 14s;"></div>
+    <div class="floating-icon bread" style="left: 80%; animation-duration: 11s; animation-name: float-reverse;"></div>
+    <div class="floating-icon gamepad" style="left: 90%; animation-duration: 17s;"></div>
+
+</body>
+</html>

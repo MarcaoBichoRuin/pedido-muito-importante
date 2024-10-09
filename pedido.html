@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita fazer um pão, tomar uma Coca-Cola bem gelada e jogar vídeo game comigo?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #f0e68c, #ffa07a);
+            font-family: 'Cursive', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 5vw; /* Ajustado para ser responsivo */
+            text-shadow: 2px 2px 5px #333;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 2vw; /* Ajustado para ser responsivo */
+            margin-bottom: 40px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 2vw; /* Ajustado para ser responsivo */
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-family: 'Cursive', sans-serif;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        #sim {
+            background-color: #ffd700;
+            color: #333;
+            background-image: url('https://img.icons8.com/color/48/000000/bread.png');
+            background-repeat: no-repeat;
+            background-position: center left;
+            padding-left: 50px;
+        }
+
+        #sim:hover {
+            background-color: #ffbf00;
+            transform: scale(1.05);
+        }
+
+        #nao {
+            background-color: #dc3545;
+            color: white;
+            background-image: url('https://img.icons8.com/color/48/000000/video-game-console.png');
+            background-repeat: no-repeat;
+            background-position: center left;
+            padding-left: 50px;
+        }
+
+        #nao:hover {
+            transform: scale(1.05);
+        }
+
+        /* Ajustes dos ícones flutuantes */
+        .floating-icon {
+            width: 5vw; /* Responsivo com a largura da tela */
+            height: 5vw; /* Responsivo com a largura da tela */
+            background-size: contain;
+            position: absolute;
+            animation: float 10s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        .coffee-cup {
+            background: url('https://img.icons8.com/color/35/cola.png') no-repeat center center;
+        }
+
+        .bread {
+            background: url('https://img.icons8.com/color/48/000000/bread.png') no-repeat center center;
+        }
+
+        .gamepad {
+            background: url('https://img.icons8.com/fluency/30/ps-controller.png') no-repeat center center;
+        }
+
+        /* Animações dos ícones flutuantes */
+        @keyframes float {
+            0% { transform: translateY(100vh); }
+            50% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+
+        @keyframes float-reverse {
+            0% { transform: translateY(-100vh); }
+            50% { transform: translateY(100vh); }
+            100% { transform: translateY(-100vh); }
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4vw;
+            }
+
+            p {
+                font-size: 3vw;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 3vw;
+            }
+
+            .floating-icon {
+                width: 7vw; /* Aumentar os ícones em telas menores */
+                height: 7vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 6vw;
+            }
+
+            p {
+                font-size: 4vw;
+            }
+
+            .button {
+                font-size: 4vw;
+            }
+
+            .floating-icon {
+                width: 10vw; /* Aumentar ainda mais em telas muito pequenas */
+                height: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Aceita fazer um pão, tomar uma Coca-Cola e jogar vídeo game comigo?</h1>
+        <p>Prometo te ensinar a fazer o melhor pão, servir uma Coca-Cola bem gelada e deixar você ganhar no vídeo game! 🥤🥖🎮</p>
+        <div class="button-container">
+            <button id="sim" class="button">Sim</button>
+            <button id="nao" class="button">Não</button>
+        </div>
+    </div>
+
+    <!-- Ícones flutuantes -->
+    <div class="floating-icon coffee-cup" style="left: 10%; animation-duration: 16s;"></div>
+    <div class="floating-icon bread" style="left: 20%; animation-duration: 11s;"></div>
+    <div class="floating-icon gamepad" style="left: 30%; animation-duration: 18s;"></div>
+    <div class="floating-icon coffee-cup" style="left: 40%; animation-duration: 14s; animation-name: float-reverse;"></div>
+    <div class="floating-icon bread" style="left: 50%; animation-duration: 16s; animation-name: float-reverse;"></div>
+    <div class="floating-icon gamepad" style="left: 60%; animation-duration: 20s;"></div>
+    <div class="floating-icon coffee-cup" style="left: 70%; animation-duration: 14s;"></div>
+    <div class="floating-icon bread" style="left: 80%; animation-duration: 11s; animation-name: float-reverse;"></div>
+    <div class="floating-icon gamepad" style="left: 90%; animation-duration: 17s;"></div>
+
+    <script>
+        const nao = document.getElementById('nao');
+        const sim = document.getElementById('sim');
+
+        // Função para movimentar o botão "Não" sem sair da tela
+        function moveButton() {
+            const maxX = window.innerWidth - nao.offsetWidth - 20; // Mantém margem de 20px
+            const maxY = window.innerHeight - nao.offsetHeight - 20; // Mantém margem de 20px
+
+            // Calcula novas posições aleatórias dentro dos limites da tela
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+
+            // Define as novas posições para o botão "Não"
+            nao.style.position = 'absolute'; // Garante que o botão não tenha uma posição relativa
+            nao.style.left = `${x}px`;
+            nao.style.top = `${y}px`;
+        }
+
+        // Adiciona evento de mouseover e touchstart
+        nao.addEventListener('mouseover', moveButton);
+        nao.addEventListener('touchstart', moveButton);
+
+        // Redirecionar para a página do poema ao clicar no "Sim"
+        sim.addEventListener('click', () => {
+            window.location.href = 'poema.html';
+        });
+    </script>
+
+</body>
+</html>
